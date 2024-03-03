@@ -24,14 +24,30 @@ li{
     margin-top: 20px;
 }
 
-img{
+/*img{
     border: 5px solid blue;
     border-radius: 35px;
     width: 100%;
-  }
+  }*/
+
+figure{
+    text-align: center;
+    border: 5px solid blue;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+img{
+    border-bottom: 5px solid blue;
+    display: block;
+}
 
 figcaption{
-    text-align: center;
+    background-color: yellow;
+}
+
+figure img{
+    width: 100%;
 }
 
 .label{
@@ -51,24 +67,37 @@ figcaption{
     }
 
     img{
-        border-radius: 50%;
+        border-radius: 50% 50% 0 0;
     }
 
-     figure:nth-child(9n){
+    figure{
+        border-radius: 50% 50% 30% 30%;
+    }
+
+    figure:nth-child(9n){
          grid-column: span 2;
-     }
+    }
 
 }
 
 @media only screen and (min-width: 998px) {
-    img{
-        border-radius: 35px;
+    figure{
+        border-radius: 0px;
     }
 
     figure:nth-child(3n){
          grid-column: span 2;
-     }
+    }
     
+    figure img{
+    width: 100%;
+    }
+
+    img{
+        border-right: 5px solid blue;
+        border-radius: 0;
+    }
+
 
 }
 
@@ -78,3 +107,21 @@ figcaption{
     }
 
 }
+
+@media (prefers-color-scheme: dark) {
+    figure{
+        border-color: black;
+    }
+
+    img{
+        border-color: black;
+    }
+
+    figcaption{
+        background-color: black;        
+    }
+    div{
+        color: yellow;
+    }
+}
+
