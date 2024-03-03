@@ -54,6 +54,10 @@ figcaption{
         border-radius: 50%;
     }
 
+     figure:nth-child(9n){
+         grid-column: span 2;
+     }
+
 }
 
 @media only screen and (min-width: 998px) {
